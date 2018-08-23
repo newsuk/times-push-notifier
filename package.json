@@ -1,0 +1,12 @@
+{
+  "name": "times-push-notifier",
+  "version": "1.0.0",
+  "description": "sends notifications to times apps",
+  "main": "index.js",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "dependencies": {
+    "firebase-admin": "^6.0.0",
+    "yargs": "^12.0.1"
+  }
+}
