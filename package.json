@@ -1,6 +1,6 @@
 {
   "name": "times-push-notifier",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "sends notifications to times apps",
   "main": "index.js",
   "license": "BSD-3-Clause",
