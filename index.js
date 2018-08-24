@@ -4,9 +4,9 @@ const firebase = require("firebase-admin");
 const serviceAccountKey = require("./serviceAccountKey.json");
 const argv = require("yargs")
   .usage(
-    "Usage: $0 --token <str> --title <str> --body <str> --article-url <url> --image-url [url]"
+    "Usage: $0 --title <str> --body <str> --article-url <url> --image-url [url]"
   )
-  .demandOption(["token", "title", "article-url", "image-url"]).argv;
+  .demandOption(["title", "article-url", "image-url"]).argv;
 
 // android push payloads cannot have a "notification" object, or inherit one.
 // If they do, then the firebase service on the device controls the notification,
@@ -46,7 +46,7 @@ firebase
     })
   )
   .send({
-    token: argv["token"],
+    topic: "exclusives",
     android: android,
     apns: apns
   })
