@@ -33,7 +33,8 @@ const apns = {
     },
     type: "exclusives",
     "article-url": argv["article-url"],
-    "image-url": argv["image-url"]
+    "image-url": argv["image-url"],
+    "send-date": Date.now()
   }
 };
 
