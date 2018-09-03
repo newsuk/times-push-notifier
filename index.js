@@ -8,7 +8,7 @@ const argv = require("yargs")
   )
   .demandOption(["title", "article-url", "image-url"]).argv;
 
-const sendDate = Date();
+const sendDate = new Date().toISOString();
 
 // android push payloads cannot have a "notification" object, or inherit one.
 // If they do, then the firebase service on the device controls the notification,
