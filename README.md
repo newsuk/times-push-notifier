@@ -7,7 +7,17 @@ How To Use
 ----------
 
 1. install dependencies with `npm install`
-2. download the service account private key for the project/environment from `https://console.firebase.google.com/u/0/project/<Project ID>/settings/serviceaccounts/adminsdk` and put it in the root of this repo. It has to be named "serviceAccountKey.json". **DO NOT CHECK THIS PRIVATE KEY INTO ANY REPO OR YOU WILL BE FIRED**.
+2. download a private key for the project that you want to notify:
+    - [The Times - Prod](https://console.firebase.google.com/u/0/project/times-smartphone-prod/settings/serviceaccounts/adminsdk)
+    - [The Times - UAT](https://console.firebase.google.com/u/0/project/times-smartphoned-uat/settings/serviceaccounts/adminsdk)
+    - [The Times - Dev](https://console.firebase.google.com/u/0/project/times-development/settings/serviceaccounts/adminsdk)
+    - [The Times Of Ireland - Prod](https://console.firebase.google.com/u/0/project/times-ireland-smartphone-prod/settings/serviceaccounts/adminsdk)
+    - [The Times Of Ireland - UAT](https://console.firebase.google.com/u/0/project/times-ireland-smartphoned-uat/settings/serviceaccounts/adminsdk)
+
+    Select "Generate new private key" and download the json file. Rename it to `serviceAccountKey.json` and put it in the root of this project.
+
+    **DO NOT CHECK THIS PRIVATE KEY INTO ANY REPO OR YOU WILL BE FIRED**.
+
 3. Send a notification with `node index.js --title <str> --body <str> --article-url <url> --image-url [url]`
 
 Example
