@@ -8,6 +8,8 @@ const argv = require("yargs")
   )
   .demandOption(["title", "article-url", "image-url"]).argv;
 
+const sendDate = new Date().toISOString();
+
 // android push payloads cannot have a "notification" object, or inherit one.
 // If they do, then the firebase service on the device controls the notification,
 // rather than our own app. Our app needs to control the notification to enable
@@ -18,7 +20,8 @@ const android = {
     title: argv["title"],
     body: argv["body"],
     "article-url": argv["article-url"],
-    "image-url": argv["image-url"]
+    "image-url": argv["image-url"],
+    "send-date": sendDate
   }
 };
 
@@ -33,7 +36,8 @@ const apns = {
     },
     type: "exclusives",
     "article-url": argv["article-url"],
-    "image-url": argv["image-url"]
+    "image-url": argv["image-url"],
+    "send-date": sendDate
   }
 };
 
