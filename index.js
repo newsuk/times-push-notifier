@@ -16,7 +16,7 @@ const sendDate = new Date().toISOString();
 // rich notifications and deeplinking.
 const android = {
   data: {
-    type: "exclusives",
+    type: "internal-testing",
     title: argv["title"],
     body: argv["body"],
     "article-url": argv["article-url"],
@@ -34,7 +34,7 @@ const apns = {
       },
       mutableContent: true
     },
-    type: "exclusives",
+    type: "internal-testing",
     "article-url": argv["article-url"],
     "image-url": argv["image-url"],
     "send-date": sendDate
@@ -50,7 +50,7 @@ firebase
     })
   )
   .send({
-    topic: "exclusives",
+    topic: "internal-testing",
     android: android,
     apns: apns
   })
